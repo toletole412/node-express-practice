@@ -1,6 +1,6 @@
 var express = require('express');
 var chalk = require('chalk');
-//var debug = require('debug')('app');
+var debug = require('debug')('app');
 var path = require('path'); //built-in methods
 
 var app = express();
@@ -14,6 +14,6 @@ app.get('/', function(req, res) {
     //path methods ignore '/'
 });
 
-app.listen(3002, function() {
-    console.log('listening on port ' + chalk.green('3002'));
+app.listen(3003, function() {
+    debug('listening on port ' + chalk.green('3003'));
 });

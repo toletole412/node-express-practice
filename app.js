@@ -4,6 +4,7 @@ var debug = require('debug')('app');
 var path = require('path'); //built-in methods
 
 var app = express();
+const port = process.env.PORT || 3000; 
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.get('/', function(req, res) {
@@ -14,6 +15,6 @@ app.get('/', function(req, res) {
     //path methods ignore '/'
 });
 
-app.listen(3003, function() {
-    debug('listening on port ' + chalk.green('3003'));
-});
+app.listen(port, function() {
+    debug('listening on port ' + chalk.green(port));
+});;
